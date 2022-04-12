@@ -1,4 +1,4 @@
-
+//p.112 #12.(2)
 
 import java.util.Scanner;
 

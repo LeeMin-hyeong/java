@@ -12,19 +12,15 @@ public class assign6 {
         double result=0;
         Boolean error=false;
 
-        if(indicator.equals("+"))
-            result=a+b;
-        else if(indicator.equals("-"))
-            result=a-b;
-        else if(indicator.equals("*"))
-            result=a*b;
+        if(indicator.equals("+")) result=a+b;
+        else if(indicator.equals("-")) result=a-b;
+        else if(indicator.equals("*")) result=a*b;
         else if(indicator.equals("/")){
             if(b==0){
                 System.out.println("0으로 나눌 수 없습니다.");
                 error=true;
             }
-            else
-                result=a/b;
+            else result=a/b;
         }
         if(!error)
             System.out.printf("%.2f%s%.2f의 계산 결과는 %.2f\n", a, indicator, b, result);

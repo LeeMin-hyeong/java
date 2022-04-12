@@ -9,7 +9,9 @@ public class assign4 {
         int x1=sc.nextInt(), y1=sc.nextInt(), x2=sc.nextInt(), y2=sc.nextInt();
         if(
             inRect(x1, y1, 100, 100, 200, 200)||inRect(x2, y2, 100, 100, 200, 200)||
-            inRect(x1, y2, 100, 100, 200, 200)||inRect(x2, y1, 100, 100, 200, 200)
+            inRect(x1, y2, 100, 100, 200, 200)||inRect(x2, y1, 100, 100, 200, 200)||
+            inRect(100, 100, x1, y1, x2, y2)||inRect(200, 200, x1, y1, x2, y2)||
+            inRect(100, 200, x1, y1, x2, y2)||inRect(200, 100, x1, y1, x2, y2)
             )
             System.out.println("충돌함");
         else
