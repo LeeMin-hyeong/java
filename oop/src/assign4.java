@@ -7,7 +7,10 @@ public class assign4 {
         Scanner sc=new Scanner(System.in);
         System.out.print("(x1, y1), (x2, y2) 입력>>");
         int x1=sc.nextInt(), y1=sc.nextInt(), x2=sc.nextInt(), y2=sc.nextInt();
-        if(inRect(x1, y1, 100, 100, 200, 200)||inRect(x2, y2, 100, 100, 200, 200))
+        if(
+            inRect(x1, y1, 100, 100, 200, 200)||inRect(x2, y2, 100, 100, 200, 200)||
+            inRect(x1, y2, 100, 100, 200, 200)||inRect(x2, y1, 100, 100, 200, 200)
+            )
             System.out.println("충돌함");
         else
             System.out.println("충돌하지 않음");
