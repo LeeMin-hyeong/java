@@ -3,12 +3,12 @@ import java.util.Scanner;
 class Phone{
     String name;
     String phoneNumber;
-    Phone(){
-        Scanner sc=new Scanner(System.in);
+    Scanner sc;
+    Phone(Scanner scanner){
+        this.sc=scanner;
         System.out.print("이름과 전화번호>>");
         name=sc.next();
         phoneNumber=sc.next();
-        sc.close();
     }
 }
 
@@ -18,7 +18,7 @@ public class PhoneBook{
         System.out.print("인원수>>");
         Phone phoneBook[]=new Phone[sc.nextInt()];
         for(int i=0; i<phoneBook.length; i++)
-            phoneBook[i]=new Phone();
+            phoneBook[i]=new Phone(sc);
         System.out.println("저장되었습니다...");
         while(true){
             System.out.print("검색할 이름>>");
